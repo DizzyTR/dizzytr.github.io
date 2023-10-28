@@ -103,6 +103,8 @@ div.social i:hover{
     margin: 5px;
     text-align: center;
     font-weight: 600;
+    background-color: black;
+    border-style: solid;
 }
 
 button:hover{
