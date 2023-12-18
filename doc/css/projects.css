@@ -147,7 +147,11 @@ div.social i:hover{
 }
 
 .center .gameandappall h3{
-    color: rgb(59, 45, 45);
+    color: rgb(145, 126, 126);
+}
+
+.center .gameandappall h1{
+    color: darkcyan;
 }
 
 .center .game h1{
