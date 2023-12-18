@@ -1,5 +1,6 @@
 body{
-    background-image: url(../img/johnshelby.jpg);
+    /*background-image: url(../img/johnshelby.jpg);*/
+    background-color: darkslategray;
     background-repeat: no-repeat;
     background-size: 100%;
 }
