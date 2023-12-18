@@ -1,5 +1,6 @@
 body{
-    background-image: url(../img/johnshelby.jpg);
+    /*background-image: url(../img/johnshelby.jpg);*/
+    background-color: darkcyan;
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -147,7 +148,8 @@ div.social i:hover{
 
 @media screen and (max-width:700px) {
     body{
-        background-image: url(../img/jhonshelby-1080x1920.jpg);
+        /*background-image: url(../img/johnshelby.jpg);*/
+    background-color: darkcyan;
         background-repeat: no-repeat;
     }
 
