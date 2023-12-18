@@ -17,6 +17,10 @@ body{
     z-index: 1;
 }
 
+.navbar{
+    position: fixed;
+}
+
 
 .center .content img{
     border-radius: 60px;
@@ -105,29 +109,6 @@ div.social i:hover{
     transition: 1s;
 }
 
-.messages{
-    padding-top: 50px;
-    width: 520px;
-    height: 250px;
-    background-color:rgb(128, 128, 128, 0.800);
-    margin-left: 450px;
-    margin-top: 150px;
-}
-
-.messages h2{
-    font-size: 36px;
-    color: rgba(255, 255, 255, 0.651);
-    text-align: center;
-    margin-top: 15px;
-}
-
-.messages h3{
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.651);
-    text-align: center;
-    padding: 10px;
-}
-
 .menubar i{
     position: absolute;
     display: none;
@@ -139,6 +120,80 @@ div.social i:hover{
     display: none;
 }
 
+.center .gameandappall button{
+    width: 85px;
+    padding: 15px 0;
+    border-radius: 35px;
+    margin: 5px;
+    text-align: center;
+    font-weight: 600;
+    background-color: white;
+    margin-left: 47%;
+    transition: 1s;
+    border-style: none;
+}
+
+.center .gameandappall button:hover{
+    color: blue;
+    transition: 1s;
+}
+
+
+.center .gameandappall{
+    margin-top: 25px;
+    margin-left: 10%;
+    position: absolute;
+}
+
+.center .gameandappall h3{
+    color: rgb(59, 45, 45);
+}
+
+.center .game h1{
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+.center .game h3{
+    margin: 10px;
+    max-width: 550px;
+    margin-left: 25%;
+}
+
+.center .game .gamedownload{
+    margin-left: -40%;
+}
+
+.center .game1 h1{
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+.center .game1 h3{
+    margin: 10px;
+    max-width: 550px;
+    margin-left: 25%;
+}
+
+.center .game1 .game1download{
+    margin-left: -40%;
+}
+
+.center .app h1{
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+.center .app h3{
+    margin: 10px;
+    max-width: 550px;
+    margin-left: 25%;
+}
+
+.center .app .appdownload{
+    margin-left: -40%;
+}
+
 
 @media screen and (max-width:700px) {
     body{
@@ -146,6 +201,10 @@ div.social i:hover{
         background-color: darkcyan;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .navbar{
+        position: absolute;
     }
 
     .center .content img{
@@ -171,15 +230,6 @@ div.social i:hover{
         margin-top: 300px;
     }
 
-    div.messages{
-        width: 300px;
-        height: 400px;
-        background-color:rgb(128, 128, 128, 0.800);
-        margin-left: 20px;
-        position: relative;
-        margin-top: 300px;
-    }
-
     .social1{
         display: none;
     }
@@ -191,7 +241,7 @@ div.social i:hover{
     }
 
     .menubar i:hover{
-        width: 320px;
+        width: 350px;
         height: 135px;
         backdrop-filter: blur(3px);
     }
@@ -216,5 +266,15 @@ div.social i:hover{
         transition: 5s;
     }
     
+    .center .gameandappall{
+        position: absolute;
+        margin-top: 80%;
+        margin-left: -10px;
+    }
+
+    .gameandappall{
+        display: block;
+    }
+
 }
 
