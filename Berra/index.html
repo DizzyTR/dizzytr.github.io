@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müzik Oynatıcı</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+       body {
+            background-color: #f8f9fa;
+        }
+        .player {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .song-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 10%;
+            object-fit: cover;
+            margin: 15px auto;
+            display: block;
+        }
+        .btn-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; margin: 5%;">Müzik Oynatıcıma Hoşgeldin</h1>
+
+    <div class="player">
+        <h4>Berra & Arda Ortak Şarkıları</h4>
+        <p id="song-title" style="font-weight: bold;">Şarkı Çalmıyor</p>
+        <img id="song-image" class="song-image" src="your-image-file.jpg" alt="Şarkı Resmi">
+        <audio id="audio" src="songs/meselayani.mp3"></audio>
+        <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-primary btn-circle" onclick="playAudio()"><i class="fas fa-play"></i></button>
+            <button class="btn btn-danger btn-circle" onclick="pauseAudio()"><i class="fas fa-pause"></i></button>
+            <button class="btn btn-secondary btn-circle" onclick="stopAudio()"><i class="fas fa-stop"></i></button>
+            <button class="btn btn-success btn-circle" onclick="changeSong()"><i class="fa-solid fa-forward"></i></button>
+        </div>
+    </div>
+    <script>
+        const audio = document.getElementById('audio');
+        const songTitle = document.getElementById('song-title');
+        const songImage = document.getElementById('song-image');
+
+        const songs = [
+            { title: "Kayra : Mesela Yani", src: "songs/meselayani.mp3", image: "meselayani.png" },
+            { title: "Farazi & Kayra - Mevsim Olmayan Mekanlar VI Unutulanlar", src: "songs/unutulanlar.mp3", image: "unutulanlar.png" },
+            { title: "Kayra : Dumanlı Kentin Hatırası", src: "songs/dumanlikentinhatirasi.mp3", image: "dumanlikentinhatirasi.jpg" },
+            { title: "Farazi & Kayra - Mevsim Olmayan Mekanlar VI Kar", src: "songs/kar.mp3", image: "kar.png" }
+        ];
+
+        let currentSongIndex = 0;
+
+        function playAudio() {
+            audio.play();
+            songTitle.textContent = songs[currentSongIndex].title;
+            songImage.src = songs[currentSongIndex].image;
+        }
+
+        function pauseAudio() {
+            audio.pause();
+        }
+
+        function stopAudio() {
+            audio.pause();
+            audio.currentTime = 0;
+            songTitle.textContent = "Şarkı Çalmıyor";
+            songImage.src = "";
+
+        }
+
+        function changeSong() {
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            audio.src = songs[currentSongIndex].src;
+            songTitle.textContent = songs[currentSongIndex].title;
+            songImage.src = songs[currentSongIndex].image;
+            audio.play();
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <footer class="footer">
+        İzin Verirsen Senin İnstagramınıda Koyarım (Ünlü Olursun) <br><a href="https://instagram.com/camarrdaa">Arda Çam</a> tarafından
+          hazırlanmıştır.
+      </footer>
+</body>
+</html>
